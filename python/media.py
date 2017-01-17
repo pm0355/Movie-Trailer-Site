@@ -1,0 +1,19 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Jan 14 20:44:21 2017
+
+@author: matti
+"""
+import webbrowser
+
+class Movie():
+    """This class provides a wayto store movie related information"""
+    valid_ratings=["G","PG","PG-13","R"]
+    def __init__(self, movie_title, movie_storyline, poster_image, trailer_youtube):
+       self.title= movie_title 
+       self.storyline= movie_storyline
+       self.poster_image_url= poster_image
+       self.trailer_youtube_url=trailer_youtube
+    def show_trailer(self):
+        webbrowser.open(self.trailer_youtube_url)
+        
